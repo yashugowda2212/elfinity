@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link href="" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            margin-right: 130px;
+            margin-top: -35px;
+
+        }
+
+        .contact-header {
+            position: fixed;
+            display: flex;
+            background-color: #007bff;
+            color: white;
+            top: 6px;
+            right: 40px;
+            padding: 10px;
+            border: 1px white;
+            border-radius: 10px;
+            box-shadow: -2px 0 5px rgba(134, 144, 103, 0.1);
+            cursor: pointer;
+            text-align: right;
+            margin-right: 0%;
+            z-index: 1000;
+
+        }
+
+
+
+        .contact-header h2 {
+            margin: 0;
+            font-size: 18px;
+            text-align: right;
+        }
+
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 100px;
+            font-style: bold;
+            font-size: 15px;
+            margin-top: 0px;
+        }
+
+        .logo {
+            max-height: 40px;
+            margin-right: 30px;
+            text-align: left;
+            gap: 1px;
+            font-size: larger;
+
+        }
+
+        .site-title {
+            font-size: 1rem;
+            color: #333;
+            top: 5px;
+            gap: 1px;
+        }
+
+        .right-side-image {
+            position: absolute;
+            right: 305px;
+            top: 48%;
+            transform: translateY(-80%);
+            height: auto;
+            max-height: 56%;
+            gap: 10px;
+            transform: translatex(+50);
+
+        }
+
+        #left-content {
+            padding-left: 100px;
+        }
+
+        .hero {
+            text-align: center;
+            background-color: rgba(24, 2, 2, 0.815);
+            background: none;
+        }
+
+        h1 {
+            text-align-last: left;
+            font-size: 44px;
+            margin-top: 50px;
+
+        }
+
+
+        p {
+            text-align: left;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .fixed-start-button {
+            position: absolute;
+            left: 100px;
+            top: 40%;
+            transform: translateY(-0%);
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            padding: 8px 10px;
+            border-radius: 10px;
+            font-size: 15px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .fixed-start-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .fixed-start-button:active {
+            background-color: #004494;
+            transform: translateY(-50%) scale(1);
+        }
+
+        #images-container {
+            position: relative;
+        }
+
+        #images-container img {
+            position: absolute;
+        }
+
+        .rect {
+            z-index: 1;
+            top: -340px;
+            left: 800px;
+        }
+
+        .play {
+            z-index: 2;
+            top: -215px;
+            left: 980px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 280px;
+            gap: 380px;
+        }
+
+        .item {
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        img {
+            max-width: 300%;
+            height: auto;
+        }
+
+        .image-trust {
+            width: 500px;
+        }
+
+        #last-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #r1 {
+            margin-right: 500px;
+        }
+
+        .see-more {
+            text-align: left;
+            margin-top: 20px;
+            padding-left: 180px;
+        }
+
+        .see-more a {
+            text-decoration: none;
+            color: #16205F;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .see-more a:hover {
+            color: #16205F;
+        }
+
+        .see-more i {
+            margin-right: 10px;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .see-more a:hover i {
+            transform: translateY(5px);
+        }
+
+
+        .card {
+            flex: 0 0 calc(12.5% - 16px);
+            background: white;
+            box-shadow: 0 4px 6px #892020dd;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            width: 1500px;
+            overflow: hidden;
+            height: 25vh;
+            font-style: 10px;
+
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card img {
+            max-width: 50px;
+            border-radius: 8px;
+            margin-bottom: 5px;
+            margin-left: -88px;
+        }
+
+        .card-container {
+            animation: slide 15s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-calc(300px * 8 + 10px * 7));
+            }
+        }
+
+        .card-container {
+            animation: slide 15s linear infinite;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-calc(300px * 8 + 10px * 7));
+            }
+        }
+
+        .card-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, #f5f5f5 0%, rgba(245, 245, 245, 0) 10%);
+            z-index: 1;
+        }
+
+        .footer {
+            background-color: white;
+            color: #fff;
+            padding: 20px 10px;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 160px;
+            color: #16205F;
+        }
+
+        .footer-column {
+            flex: 1 1 200px;
+            min-width: 200px;
+        }
+
+        .footer-column h3,
+        .footer-column h4 {
+            margin-bottom: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: left;
+            color: #16205F;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .footer-column ul li a {
+            text-decoration: none;
+            color: #fff;
+            transition: color 0.3s ease;
+        }
+
+        
+        #icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 15px;
+            border-top: 1px solid #444;
+            margin-top: 40px;
+            color: #16205F;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 14px;
+            text-align: center;
+        }
+        #follow {
+            margin-left: 0px;
+        }
+
+        @media (max-width: 200px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+
+            }
+        }
+
+        .h3 {
+            text-align: center;
+            font-size: 35px;
+            padding-left: 3px;
+            gap: 60px;
+        }
+
+
+        .trust p {
+            text-align: left;
+            padding-left: 180px;
+            font-size: 18px;
+        }
+
+        .trust h2 {
+            padding-left: 180px;
+            font-size: 35px;
+        }
+
+        #left-trust-container {
+            position: absolute;
+            display: contents;
+            width: 100px;
+            text-align: left;
+            font-size: 20px;
+
+        }
+
+        #right-trust-container {
+            position: absolute;
+            justify-content: center;
+            width: 10px;
+            right: 600px;
+            top: 1280px;
+
+        }
+
+        #images-container {
+            display: flex;
+        }
+
+        .b2b-services {
+            padding: 1rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        .b2c-services {
+            padding: 1rem;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+
+        #head-para-1 {
+            margin-bottom: 2rem;
+        }
+
+        .head-para-1 h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5;
+
+        }
+
+        .head-para-1 p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+
+        .head-para {
+            margin-bottom: 2rem;
+
+        }
+
+        .head-para h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .head-para p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .service-item {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item-1 {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 8px;
+            position: relative;
+            display: flex;
+            width: 450px;
+            align-items: flex-end;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-item-1:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #middle {
+            display: flex;
+            gap: 20px;
+
+            justify-content: center;
+
+        }
+
+        .service-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+
+            border-radius: 8px;
+            width: auto;
+            padding-top: 80px;
+            height: 250px;
+        }
+
+        .service-content-1 {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 1rem;
+            border-radius: 8px;
+            width: auto;
+            padding-top: 60px;
+            height: 250px;
+        }
+
+
+
+        .service-content-1 h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-content-1 p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+
+        .service-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-content p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .learn-more-btn {
+            color: #00f;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        #fun {
+            margin-left: 0px;
+        }
+
+        #supaar {
+            display: inline-block;
+            justify-content: center;
+            color: #16205F;
+        }
+
+        #start-section {
+            width: auto;
+        }
+
+        .learn-more-btn i {
+            font-size: 1.2rem;
+        }
+
+        .learn-more-btn:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 1024px) {
+            .services-container {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .learn-more-btn {
+            color: #00f;
+            font-size: 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .learn-more-btn i {
+            font-size: 1.2rem;
+        }
+
+        .learn-more-btn:hover {
+            text-decoration: underline;
+        }
+
+
+        .content-section {
+            text-align: center;
+            width: 300%;
+            max-width: 1300px;
+        }
+
+        .content-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 80px;
+        }
+
+        .content-image img {
+            max-width: 550px;
+            height: auto;
+        }
+
+        .content-paragraph h2 {
+            text-align: center;
+            font-size: 20px;
+            top: 20px;
+
+        }
+
+        .content-paragraph p {
+            text-align: center;
+            font-size: 13px;
+            text-align: left;
+        }
+
+        #head-para {
+            padding-left: 85px;
+        }
+
+        #head-para p {
+            padding-left: 30px;
+        }
+
+        .content-paragraph p {
+            text-align: center;
+            font-size: 13px;
+            text-align: left;
+        }
+
+        .content-paragraph {
+            width: 701px;
+            margin-left: -40px;
+            background-color: rgb(150, 158, 214);
+            padding-right: 53px;
+            padding-left: 48px;
+            padding-top: 25px;
+            padding-bottom: 50px;
+
+        }
+
+        .content-paragraph {
+            font-size: 11px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        .h3 {
+            text-align: left;
+        }
+
+        .whatsapp-icon {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 50px;
+            height: 50px;
+            z-index: 1000;
+        }
+
+        .whatsapp-icon img {
+            width: 1000px;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(19, 230, 36, 0.2);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .whatsapp-icon img:hover {
+            transform: scale(1.1);
+        }
+
+        body {
+
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .learn-more-btn {
+            align-items: left;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .learn-more-btn i {
+            margin-right: 8px;
+            font-size: 20px;
+            bottom: 10px;
+        }
+
+        .pink {
+            color: rgb(238, 22, 191);
+        }
+
+        .darkorchid {
+            color: rgb(232, 122, 213);
+        }
+
+        .blue {
+            color: blue;
+        }
+
+        .red {
+            color: #B73D7F;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="image/YNOS483198.jpg" alt="Elfinity Technologies" class="logo">
+        <span class="site-title">Elfinity Technologies</span>
+        <nav>
+            <ul>
+                <br>
+                <li><a>ABOUT US</a></li>
+                <li><a>SERVICES</a></li>
+                <li><a>SOLUTIONS</a></li>
+                <li><a>INDUSTRIES</a></li>
+                <li><a>TECHNOLOGIES</a></li><br>
+                <button class="contact-header">Contact-us</button>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="content">
+            <div id="left-content">
+                <img src="image/web-development 1.png" alt="Right Side Image" class="right-side-image">
+                <h1>Transforming <span class="pink"> vison into</span><br><span class="darkorchid">reality</span> one
+                    solution at a<br><span class="blue">time</span></h1>
+
+                <p>Empowering your business with cutting-edge technology and<br>a tailored IT solutions.</p><br>
+
+                <a href="#start" class="fixed-start-button">Let's Get Started</a>
+
+            </div>
+            <br><br><br><br><br>
+
+            <h2>Service we offer</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="image/Group 1.png">
+                    <p>At NOVEL SKY TECHNOLOGIES, we undertake comprehensive company projects tailored to meet the
+                        unique needs of businesses across various industries. Our approach involves a thorough
+                        understanding of client requirements,</p>
+                </div>
+                <div class="card">
+                    <img src="image/Group 1.png">
+                    <p>At NOVEL SKY TECHNOLOGIES, we undertake comprehensive company projects tailored to meet the
+                        unique needs of businesses across various industries. Our approach involves a thorough
+                        understanding of client requirements,</p>
+                </div>
+                <div class="card">
+                    <img src="image/Group 1.png">
+                    <p>At NOVEL SKY TECHNOLOGIES, we undertake comprehensive company projects tailored to meet the
+                        unique needs of businesses across various industries. Our approach involves a thorough
+                        understanding of client requirements,</p>
+                </div>
+                <div class="card">
+                    <img src="image/Group 1.png">
+                    <p>At NOVEL SKY TECHNOLOGIES, we undertake comprehensive company projects tailored to meet the
+                        unique needs of businesses across various industries. Our approach involves a thorough
+                        understanding of client requirements,</p>
+                </div>
+                <div class="card">
+                    <img src="image/Group 1.png">
+                    <p>At NOVEL SKY TECHNOLOGIES, we undertake comprehensive company projects tailored to meet the
+                        unique needs of businesses across various industries. Our approach involves a thorough
+                        understanding of client requirements,</p>
+                </div>
+                <div class="card">
+                    <img src="image/Group 1.png">
+                    <p>At NOVEL SKY TECHNOLOGIES, we undertake comprehensive company projects tailored to meet the
+                        unique needs of businesses across various industries. Our approach involves a thorough
+                        understanding of client requirements,</p>
+                </div>
+                <div class="card">
+                    <img src="image/Group 1.png">
+                    <p>At NOVEL SKY TECHNOLOGIES, we undertake comprehensive company projects tailored to meet the
+                        unique needs of businesses across various industries. Our approach involves a thorough
+                        understanding of client requirements,</p>
+                </div>
+                <div class="card">
+                    <img src="image/Group 1.png">
+                    <p>At NOVEL SKY TECHNOLOGIES, we undertake comprehensive company projects tailored to meet the
+                        unique needs of businesses across various industries. Our approach involves a thorough
+                        understanding of client requirements,</p>
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div id="photo">
+                <img src="image/Frame 88.png" width="100%" height="60px">
+
+            </div>
+            <br><br><br>
+            <div id="left-trust-container">
+                <div class="trust">
+                    <h2>Leading companies trust us<br> to develop software</h2>
+                    <p>Welcome to <span class="red">ELFINITY TECHNOLOGIES,</span> where we specialize<br> in
+                        comprehensive IT services tailored
+                        for both existing and<br> new projects. Our expertise lies in development IT services,<br>
+                        encompassing custom software and web development, mobile<br> app solutions, cloud technologies
+                    </p>
+                </div>
+                <div class="see-more">
+                    <a href="#more-content">
+                        <i class="bi bi-arrow-down-circle">See More Information</i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                          </svg>
+                    </a>
+                </div>
+            </div>
+            <br><br>
+            <div id="images-container">
+                <img src="image/Rectangle 8.png" alt="Rectangle" class="rect" width="400px">
+                <img src="image/Group 14.png" alt="Play Icon" class="play" width="53px">
+            </div>
+
+            <section class="b2b-services">
+                <div id="head-para-1">
+                    <h1>B2B Services</h1>
+                    <p>For businesses seeking robust IT solutions, NOVEL SKY TECHNOLOGIES offers.</p>
+                </div>
+                <div class="services-container">
+                    <div class="service-item" style="background-image: url('image/image 1.png');">
+                        <div class="service-content">
+                            <h2>Custom Software development</h2>
+                            <p>Tailored software solutions to streamline operatons and enhance productivity.</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More</a>
+
+                        </div>
+                    </div>
+                    <div class="service-item" style="background-image: url('image/image 1 (1).png');">
+                        <div class="service-content">
+                            <h2>IT Infrastructure Services</h2>
+                            <p>Comprehencesive support for building and managing scalable IT infrastructure.</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More</a>
+
+                        </div>
+                    </div>
+                    <div class="service-item" style="background-image: url('image/image 1 (2).png');">
+                        <div class="service-content">
+                            <h2>Cloud Solutions</h2>
+                            <p>Secure and scalable cloud services for flexible data management and storage.</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More</a>
+
+                        </div>
+                    </div>
+                    <div class="service-item" style="background-image: url('image/image 1 (3).png');">
+                        <div class="service-content">
+                            <h2>Enterprise Resource Planning</h2>
+                            <p>Integration and optimization of ERP systems to streamline bussiness processes.</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More</a>
+
+                        </div>
+                    </div>
+                    <div class="service-item" style="background-image: url('image/image 1 (4).png');">
+                        <div class="service-content">
+                            <h2>Business Intelligence and Analytics</h2>
+                            <p>Data-driven insights to facillitate informed decision-making and strategic planning</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More</a>
+
+                        </div>
+                    </div>
+                    <div class="service-item" style="background-image: url('image/image 1 (5).png');">
+                        <div class="service-content">
+                            <h2>Cybersecurity Solutions</h2>
+                            <p>Robust security measures to safeguard business data and assests.</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More</a>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ........................................ -->
+
+            <section class="b2c-services">
+                <div class="head-para">
+                    <h1>B2C Services</h1>
+                    <p>For consumers, ELFINITY TECHNOLOGIES provides:</p>
+                </div>
+                <div class="services-container">
+
+                    <div class="service-item" style="background-image: url('image/mobile.jpg');">
+                        <div class="service-content">
+                            <h2>Mobile App Development</h2>
+                            <p>Engaging and user-friendly mobile applications to enhance customer experience and
+                                satisfaction.</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="service-item" style="background-image: url('image/image\ 1\ \(6\).png');">
+                        <div class="service-content">
+                            <h2>E-commerce Solutions</h2>
+                            <p>Customized platforms for seamless online shopping experiences and efficient transaction
+                                management.</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <div class="service-item" style="background-image: url('image/image\ 1\ \(10\).png');">
+                        <div class="service-content">
+                            <h2>Digital Marketing</h2>
+                            <p>Strategies to enhance brand visibility, attract customers, and drive sales.</p>
+                            <a href="#" class="learn-more-btn">
+                                <i class="fas fa-info-circle"></i> Learn More
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </section>
+
+            <div id="middle">
+
+                <div class="service-item-1" style="background-image: url('image/image\ 1\ \(8\).png');">
+                    <div class="service-content-1">
+                        <h2>Customer Relationship Management (CRM) Systems</h2>
+                        <p>Tools to manage and optimize customer interactions and relationships.</p>
+                        <a href="#" class="learn-more-btn">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="service-item-1" style="background-image: url('image/image\ 1\ \(9\).png');">
+                    <div class="service-content-1">
+                        <h2>Website Development</h2>
+                        <p>Responsive and user-centric websites to establish a strong online presence.</p>
+                        <a href="#" class="learn-more-btn">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- ..................................... -->
+
+
+            <div class="content-section">
+
+                <div class="content-container">
+                    <div class="content-image">
+                        <img src="image/Case-study__image (1).png" alt="Bottle Logo">
+                    </div>
+                    <div class="content-paragraph">
+                        <h2>Our Approach</h2>
+                        <p>A ELFINITY STECHNOLOGIES, we are committed to delivering excellence in every Project
+                            undertake<br> Our team of skilled professional combines industry expertise with
+                            innovative technologies to delivery solutions that meet the unique needs of our
+                            clients, whether they are businessess looking to optimize their operations or
+                            consumers seeking enhanced digital experiences.<br><br><br>Partner with ELFINITY
+                            TECHNOLOGIES to embrak on a journey of digital transformation and business<br>Succes.
+                            Contact us today to discover how we can empower your organization or enhance
+                            your digital presence.<br> </p>
+                    </div>
+                </div>
+            </div><br><br>
+
+
+
+
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <h3 class="elifi">Elfinity Technologies</h3>
+                        <p>Transforming visions into reality one innovative solution at a</p>
+                        <p>
+                            <i class="bi bi-envelope"></i>
+                            &#x2709; <a href="admin@elfinitytechnologies.com">admin@elfinitytechnologies.com</a><br><br>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                                class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                            <a href="9392216834">9392216834</a><br><br>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor"
+                                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                            </svg>
+                            <a
+                                href="3rd Floor, Goodworks CoWorks, Akshay Tech Park, Vijayanagar, EPIP Zone, Whitefield, Bengaluru, Karnataka 560066.IN">3rd
+                                Floor, Goodworks CoWorks, Akshay Tech Park, Vijayanagar, EPIP Zone, Whitefield,
+                                Bengaluru, Karnataka 560066.IN</a>
+                               </p>
+
+                    </div>
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li>About Us</li><br>
+                            <li>Succes Stories</li><br>
+                            <li>Privacy Policy</li><br>
+                            <li>Terms & Conditions</li><br>
+                            <li>Contact Us</li><br>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li>Company Projects</li><br>
+                            <li>IT Solutions</li><br>
+                            <li>Project Managements</li><br>
+                            <li>Problem Statements</li><br>
+                            <li>IT Services</li><br>
+                            <li>Existing Projects</li><br>
+                            <li>New Projects</li><br>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>INDUSTRIES</h4>
+                        <ul>
+                            <li>Finance and Banking</li><br>
+                            <li>Healthcare</li><br>
+                            <li>Technology</li><br>
+                            <li>Telecommunications</li><br>
+                            <li>Transportation</li><br>
+                        </ul>
+
+                    </div>
+                </div>
+
+
+                <div id="supaar">
+
+                    <h3 id="fun">Follow Us</h3>
+                    <div id="follow">
+                        <div id="icons">
+
+                            <i class="bi bi-twitter"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-twitter" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334q.002-.211-.006-.422A6.7 6.7 0 0 0 16 3.542a6.7 6.7 0 0 1-1.889.518 3.3 3.3 0 0 0 1.447-1.817 6.5 6.5 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.32 9.32 0 0 1-6.767-3.429 3.29 3.29 0 0 0 1.018 4.382A3.3 3.3 0 0 1 .64 6.575v.045a3.29 3.29 0 0 0 2.632 3.218 3.2 3.2 0 0 1-.865.115 3 3 0 0 1-.614-.057 3.28 3.28 0 0 0 3.067 2.277A6.6 6.6 0 0 1 .78 13.58a6 6 0 0 1-.78-.045A9.34 9.34 0 0 0 5.026 15" />
+                            </svg>
+
+                            <i class="bi bi-facebook"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                            </svg>
+
+                            <i class="bi bi-instagram"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                            </svg>
+
+                            <i class="bi bi-linkedin"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                            </svg>
+                            <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="25" fill="currentColor"
+                                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                    <path
+                                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                                </svg>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Elfinity Technologies. All rights reserved.</p>
+                </div>
+            </footer>
+
+            <script>
+                function toggleContent() {
+                    const moreContent = document.getElementById("moreContent");
+                    const seeMoreText = document.getElementById("seeMoreText");
+
+                    if (moreContent.style.display === "none") {
+                        moreContent.style.display = "block";
+                        seeMoreText.textContent = "See Less";
+                    } else {
+                        moreContent.style.display = "none";
+                        seeMoreText.textContent = "See more Information";
+                    }
+                }
+
+            </script>
+
+</body>
+</html>
